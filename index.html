@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8"/>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <title>Drag pictures</title>
+    </head>
+    <body>
+        <!--
+            Write HTML and Javascript to do the following:
+            1. Images in "source" should be draggable.
+            2. "target1" and "target2" should be able to receive the dragged images
+            3. The "status" box should update to show the number of images in the other three boxes at any given time.
+        -->
+        <noscript>Please enable JavaScript</noscript>
+        <div id="root">
+            <div id="source" className="box">
+                <img src="./img/1.jpg" id="p1" draggable="true">
+                <img src="./img/2.jpg" id="p2" draggable="true">
+                <img src="./img/3.jpg" id="p3" draggable="true">
+                <img src="./img/4.jpg" id="p4" draggable="true">
+                <img src="./img/5.jpg" id="p5" draggable="true">
+                <img src="./img/6.jpg" id="p6" draggable="true">
+                <img src="./img/7.jpg" id="p7" draggable="true">
+            </div>
+            <div id="status" className="box">
+                Source has 7 images.<br>
+                Target1 has 0 images.<br>
+                Target2 has 0 images.
+            </div>
+            <div id="target1" className="box" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"></div>
+            <div id="target2" className="box" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"></div>
+        </div>
+    </body>
+</html>
